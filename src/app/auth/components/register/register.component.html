@@ -1,0 +1,61 @@
+<div class="login" style="margin-bottom: 300px;">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 mx-auto">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-login" style="background-color: rgba(39, 39, 39, 0.12);">
+                    <h1 style="margin-top: -35px; margin-bottom: 40px; font-weight: 500;">Đăng ký</h1>
+                    <div class="mb-3 mt-4">
+                      <input type="text" class="form-control" id="first_name" placeholder="first_name" formControlName="first_name"/>
+                      <div *ngIf="registerForm.get('first_name')!.hasError('required') && registerForm.get('first_name')!.touched" class="text-danger">
+                        Họ không được để trống
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="text" class="form-control" id="last_name" placeholder="last_name" formControlName="last_name"/>
+                      <div *ngIf="registerForm.get('last_name')!.hasError('required') && registerForm.get('last_name')!.touched" class="text-danger">
+                        Tên không được để trống
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email"/>
+                      <div *ngIf="registerForm.get('email')!.hasError('required') && registerForm.get('email')!.touched" class="text-danger">
+                        Email không được để trống
+                      </div>
+                      <div *ngIf="registerForm.get('email')!.hasError('email') && registerForm.get('email')!.touched" class="text-danger">
+                        Email không hợp lệ
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="text" class="form-control" id="username" placeholder="username" formControlName="username"/>
+                      <div *ngIf="registerForm.get('username')!.hasError('required') && registerForm.get('username')!.touched" class="text-danger">
+                        Tài khoản không được để trống
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="password" class="form-control" id="password" placeholder="Mật khẩu" formControlName="password"/>
+                      <div *ngIf="registerForm.get('password')!.hasError('required') && registerForm.get('password')!.touched" class="text-danger">
+                        Mật khẩu không được để trống
+                      </div>
+                      <div *ngIf="registerForm.get('password')!.hasError('minlength') && registerForm.get('password')!.touched" class="text-danger">
+                        Mật khẩu phải có ít nhất 8 kí tự
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="password" class="form-control" id="password_confirmation" placeholder="Mật khẩu" formControlName="password_confirmation"/>
+                      <div *ngIf="registerForm.get('password_confirmation')!.hasError('required') && registerForm.get('password_confirmation')!.touched" class="text-danger">
+                        Mật khẩu không được để trống
+                      </div>
+                    </div>
+                    <div class="my-4">
+                      <input type="text" class="form-control" id="phone" placeholder="phone" formControlName="phone"/>
+                      <div *ngIf="registerForm.get('phone')!.hasError('required') && registerForm.get('phone')!.touched" class="text-danger">
+                        Số điện thoại không được để trống
+                      </div>
+                    </div>
+                    <button type="submit" class="btn mb-3">Tạo tài khoản</button><br>
+                    <h2 style="font-size: 16px; font-weight: 400;" routerLink="/auth/login">Đăng nhập</h2>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

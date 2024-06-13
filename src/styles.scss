@@ -1,0 +1,18 @@
+*{
+    font-family: sans-serif;
+}
+.container{
+    max-width: 1400px;
+}
+
+.pending {
+  color: yellow; /* Màu vàng cho trạng thái Pending */
+}
+
+.approved {
+  color: green; /* Màu xanh cho trạng thái Approved */
+}
+
+.not-approved {
+  color: red; /* Màu đỏ cho trạng thái Not approved */
+}

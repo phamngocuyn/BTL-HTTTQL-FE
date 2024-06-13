@@ -1,0 +1,249 @@
+<div class="container-fluid text-bg-light">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item" aria-current="page"> Chi tiết sản phẩm </li>
+      </ol>
+    </nav>
+  
+    <div class="container-fluid px-40 d-flex justify-content-between">
+      <div class="box-content-detail row bg-white ">
+        <div class="product-col-left p-20 w-50">
+          <div class="slick-track">
+            <img class="img-fluid" [src]="getImageUrl(productDetail.images[0])" >
+          </div>
+        </div>
+        <div class="product-col-right p-20 w-50">
+          <div class="product-title">
+            <h1>{{ productDetail.name }}</h1>
+            <div class="pro-meta mb-2">
+              <span class="pro-brand">{{  productDetail.brand }}</span>
+              <span id="pro_sku">SKU: <span>71034922</span></span>
+            </div>
+  
+          </div> 
+          <div class="product-row">
+            <div class="product-price">
+              <div id="price-preview">
+                <span class="pro-price">{{ productDetail.price | currency}}</span>
+              </div>
+            </div>
+            <form id="add-item-form" action="" method="post" class="variants clearfix">
+              <div class="product-shortdesc py-2 fs-14">
+                <ul class="ul ps-2 ">
+                  <li>CPU Intel Core Ultra 5 125H (18MB, Up to 4.50GHz)</li>
+                  <li>RAM 16GB LPDDR5X 7467MHz</li>
+                  <li>SSD 1TB M.2 PCIe NVMe</li>
+                  <li>VGA Intel Arc Graphics (7-Cores)</li>
+                  <li>Display 13.4Inch FHD+ Anti-Glare 500nits EyeSafe</li>
+                  <li>Pin 3Cell 55WHrs</li>
+                  <li>Color Platinum Silver (Bạc)</li>
+                  <li>Finger Print</li>
+                  <li>Weight 1.19 kg</li>
+                  <li>OS Windows 11 Home + Office HS21</li>
+              </ul></div>
+  
+              <div class="selector-actions">
+                <div class="quantity-area clearfix mt-0">
+                  <input type="button" value="-" class="qty-btn">
+                  <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
+                  <input type="button" value="+" class="qty-btn">
+                </div>
+              </div>
+  
+            </form>
+  
+            <div class="product-action">
+              <button type="button" id="buy-now" class="add-to-cartProduct add-cart-bottom button"> Mua ngay</button>
+              <button type="button" id="add-to-cart" class="add-to-cartProduct add-cart-bottom button"> Thêm vào giỏ</button>
+            </div>
+          </div>
+          <div class="advantage pt-4">
+            <div class="advantage_content">
+              <p>Bảo hành chính hãng tại nhà trên toàn quốc</p>
+              <p>Ship COD toàn quốc</p>
+              <p>Có trung tâm hỗ trợ kỹ thuật</p>
+              <p>Chất lượng tốt, giá cạnh tranh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-27">
+      <div class="box-content-detail bg-white ">
+        <div class="product-description w-75 p-20">
+          <div class="product-tabs">
+            <h3 class="tabs-nav mb-0">Mô Tả</h3>
+            <div class="tabs-stage">
+              <div id="tab-1" class="active">
+                <div class="description-content">
+                  <div class="description-productdetail less">
+                    <table>
+                      <tbody>
+                      <tr>
+                        <td style="vertical-align:top"><p>Bộ vi xử lý</p></td>
+                        <td style="vertical-align:top"><p>Intel Core i7-1360P</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Tốc độ</p></td>
+                        <td style="vertical-align:top"><p>upto 5.00 GHz,&nbsp; 12 cores 16&nbsp;threads</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Bộ nhớ đệm</p></td>
+                        <td style="vertical-align:top"><p>18MB</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Bộ nhớ trong (RAM)</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Dung lượng</p></td>
+                        <td style="vertical-align:top"><p>16GB LPDDR5 6000Mhz</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Số khe cắm</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Ổ cứng</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Dung lượng</p></td>
+                        <td style="vertical-align:top"><p>512GB M.2 PCIe NVMe SSD</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Tốc độ vòng quay</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr><tr>
+                        <td style="vertical-align:top"><p>Khe cắm SSD mở rộng</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Ổ đĩa quang (ODD)</p></td>
+                        <td style="vertical-align:top"><p>Không có</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Hiển thị</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Màn hình</p></td>
+                        <td style="vertical-align:top"><p>13.4 inch, 60Hz, OLED, Touch, Anti-Reflect, 400 nit, InfinityEdge</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Độ phân giải</p></td>
+                        <td style="vertical-align:top"><p>3.5K (3456 × 2160)</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Đồ Họa (VGA)</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Card màn hình</p></td>
+                        <td style="vertical-align:top"><p>Intel Iris Xe Graphics</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kết nối (Network)</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Wireless</p></td>
+                        <td style="vertical-align:top"><p>Intel® Killer™ Wi-Fi 6 1675 (AX211) 2x2</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>LAN</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Bluetooth</p></td>
+                        <td style="vertical-align:top"><p>Bluetooth 5.2 Wireless Card</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Bàn phím , Chuột</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td></tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kiểu bàn phím</p></td>
+                        <td style="vertical-align:top"><p>Bàn phím tiêu chuẩn, Đèn nền bàn phím</p></td>
+                      </tr><tr><td style="vertical-align:top"><p>Chuột</p></td>
+                        <td style="vertical-align:top"><p>Cảm ứng đa điểm</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Giao tiếp mở rộng</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kết nối USB</p></td>
+                        <td style="vertical-align:top"><p>2 x Thunderbolt™ 4 (USB Type-C™ with DisplayPort and Power Delivery)<br>USB-C to USB-A 3.0 adapter (included in the box)</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kết nối HDMI/VGA</p></td>
+                        <td style="vertical-align:top"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Tai nghe</p></td>
+                        <td style="vertical-align:top"><p>USB-C to 3.5mm headset adapter (included in the box)</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Camera</p></td>
+                        <td style="vertical-align:top"><p>720p at 30 fps HD RGB camera, 400p at 30 fps IR camera, dual-array microphones</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Card mở rộng</p></td>
+                        <td style="vertical-align:top"><p>-</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>LOA</p></td>
+                        <td style="vertical-align:top"><p>2 Loa</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kiểu Pin</p></td>
+                        <td style="vertical-align:top"><p>3 Cell, 55 Wh</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Sạc pin</p></td>
+                        <td style="vertical-align:top"><p>Đi kèm</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Hệ điều hành&nbsp;(bản quyền) đi kèm</p></td>
+                        <td style="vertical-align:top"><p>Windows 11 Home Single Language + Office 2021 Home and Student</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Kích thước (Dài x Rộng x Cao)</p></td>
+                        <td style="vertical-align:top"><p>15.28 mm&nbsp;x&nbsp;295.30 mm x&nbsp;199.04 mm</p></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:top"><p>Trọng Lượng</p></td>
+                        <td style="vertical-align:top"><p>1.26 kg</p></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title-bl">
+            <h2>Nhận xét của Máy tính xách tay Dell XPS 13 9340</h2>
+          </div>
+          <div class="description-content review">
+            <div class="review_summary">
+              <div class="review_summary__figure">
+                <div class="review_line__figure"><strong>0</strong>/<span>5</span></div>
+                <div class="review_line__star">
+                  <div class="review_background">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </div>
+              <button id="comment_review">Viết đánh giá</button>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>

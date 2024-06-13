@@ -1,0 +1,52 @@
+<table class="table caption-top align-middle table-bordered">
+    <caption class="text-primary fs-3 text">
+      <h3 class="col-4">Danh sách người dùng</h3>
+      <div>
+        <form class="col-4 form-inline" (submit)="searchCustomers()">
+            <div class="input-group">
+              <input class="form-control" type="search" placeholder="Tìm kiếm khách hàng..." aria-label="Search" [(ngModel)]="keyword" name="keyword">
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+        </form>
+        <button routerLink="create_user" type="button" class="btn btn-success float-end">
+          <i class="fa-solid fa-plus"></i>
+          Thêm người dùng mới
+        </button>
+      </div>
+  
+    </caption>
+    <thead class="table-light">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ngày sinh</th>      
+      <th scope="col">Địa chỉ</th>
+      <th scope="col">Sửa</th>
+      <th scope="col">Xóa</th>
+    </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of listCustomer">
+            <th scope="row">{{ customer.id }}</th>
+            <td><a class="nav-link" title="Ấn vào để xem chi tiết" routerLink="detail_customer/{{customer.id}}">{{ customer.first_name }} {{ customer.last_name }}</a></td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.birth_day }}</td>
+            <td>{{ customer.address }}</td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-pen-to-square text-primary"></i>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-trash text-danger" (click)="deleteCustomer(customer.id)"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  

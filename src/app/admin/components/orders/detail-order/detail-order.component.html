@@ -1,0 +1,93 @@
+<div class="container-fluid text-bg-light p-4">
+    <h5 class="pb-4 border-bottom">Chi tiết đơn hàng</h5>
+    <div class="row">
+      <div class="col-6 pt-4">
+        <div class="row my-2">
+          <div class="col-lg-5">ID
+          </div>
+          <div class="col-lg-6"> : 1
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Ngày tạo
+          </div>
+          <div class="col-lg-6"> : {{order.created_at | date}}
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Người tạo
+          </div>
+          <div class="col-lg-6"> : {{ order.employee }}
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Ngày sửa cuối
+          </div>
+          <div class="col-lg-6"> : {{order.update_at | date}}
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Người sửa cuối
+          </div>
+          <div class="col-lg-6"> : Phạm Ngọc Uyn
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Địa chỉ
+          </div>
+          <div class="col-lg-6"> : {{order.address}}
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Quốc tịch
+          </div>
+          <div class="col-lg-6"> : Việt Nam
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-6 pt-4">
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Tên khách hàng
+          </div>
+          <div class="col-lg-6"> : {{order.customer}}
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Số điện thoại
+          </div>
+          <div class="col-lg-6"> : 0972178205
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Phương thức vận chuyển
+          </div>
+          <div class="col-lg-6"> : Giao hàng
+          </div>
+        </div>
+  
+        <div class="row my-2">
+          <div class="col-lg-5">Trạng thái
+          </div>
+          <div class="col-lg-6"> : Approved
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="row col-6 my-2">
+      <div class="col-lg-5">Tổng tiền
+      </div>
+      <div class="col-lg-6"> : {{order.total}}
+      </div>
+    </div>
+  </div>

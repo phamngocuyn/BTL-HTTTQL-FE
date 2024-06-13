@@ -1,0 +1,54 @@
+<table class="table caption-top align-middle table-bordered">
+    <caption class="text-primary fs-3 text">
+      <h3 class="col-4">Danh sách nhân viên</h3>
+      <div>
+        <form class="col-4 form-inline" (submit)="searchEmployees(searchInput.value)">
+          <div class="input-group">
+            <input class="form-control" #searchInput type="search" placeholder="Tìm kiếm nhân viên..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <button routerLink="create_employee" type="button" class="btn btn-success float-end">
+          <i class="fa-solid fa-plus"></i>
+          Thêm nhân viên mới
+        </button>
+      </div>
+    
+    </caption>
+    <thead class="table-light">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Họ</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Ngày sinh</th>
+      <th scope="col">Email</th>
+      <th scope="col">Số điện thoại</th>
+      <th scope="col">Sửa</th>
+      <th scope="col">Xóa</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of listEmpoyee" >
+      <th scope="row">{{ employee.id }}</th>
+      <td><a class="nav-link" title="Ấn vào để xem chi tiết" routerLink="detail_employee/{{employee.id}}">{{ employee.first_name }}</a></td>
+      <td>{{ employee.last_name }}</td>
+      <td>{{ employee.birth_day }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.address }}</td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-pen-to-square text-primary"></i>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-trash text-danger" (click)="deleteEmployee(employee.id)"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+   
+   

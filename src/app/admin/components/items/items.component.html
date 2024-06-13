@@ -1,0 +1,51 @@
+<table class="table caption-top">
+  <caption class="text-primary fs-3 text">
+    <h3 class="col-4">Danh sách sản phẩm</h3>
+    <div>
+      <form class="col-4 form-inline" (ngSubmit)="searchProducts()">
+        <div class="input-group">
+          <input class="form-control" type="search" [(ngModel)]="searchKeyword" name="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+      <button routerLink="create_item" type="button" class="btn btn-success float-end">
+        <i class="fa-solid fa-plus"></i>
+        Thêm sản phẩm mới
+      </button>
+    </div> 
+  </caption>
+  <thead class="table-light">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Giá</th>
+      <th scope="col">Số lượng</th>
+      <th scope="col">Ngày nhập</th>
+      <th scope="col">Sửa</th>
+      <th scope="col">Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of listProduct | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+      <th scope="row">{{ product.id }}</th>
+      <td><a class="nav-link" title="Ấn vào để xem chi tiết" routerLink="detail_item/{{product.id}}">{{ product.name }}</a></td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+      <td>{{ product.created_at | date }}</td>
+      <td>
+        <button type="button" class="btn" routerLink="create_item">
+          <i class="fa-solid fa-pen-to-square text-primary"></i>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-trash text-danger" (click)="deleteProduct(product.id)"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>

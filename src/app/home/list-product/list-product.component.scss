@@ -1,0 +1,198 @@
+body {
+    background: #f3f5f6;
+  }
+  
+  a {
+    text-decoration: none;
+    outline: 0
+  }
+  
+  .fs-13 {
+    font-size: 13px;
+    color: #000000;
+  }
+  
+  .px-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  
+  .breadcrumb {
+    padding: 20px 40px;
+    margin: 0;
+  }
+  
+  .accordion {
+  
+    .accordion-button {
+      background: #ffffff;
+      color: #00447c;
+    }
+  
+  }
+  
+  .collection {
+    background: #ffffff;
+  
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0076ce;
+    }
+  
+    .list-collection {
+  
+      .product-loop {
+        display: block;
+        position: relative;
+        background: #fff;
+        padding: 10px;
+        outline: 0;
+        width: 25%;
+  
+        .product-block {
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          border: 1px solid #2a85c7;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  
+          .product-img {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+  
+            a {
+              display: block;
+              color: #222;
+              text-decoration: none;
+              outline: 0;
+  
+              .aspect-ratio {
+                position: relative;
+                padding-bottom: 100%;
+  
+                picture {
+                  position: absolute;
+                  left: 0%;
+                  top: 0%;
+                  right: 0;
+                  -webkit-transition: all 0.5s ease 0s;
+                  transition: all 0.5s ease 0s;
+                  width: 100%;
+                  height: 100%;
+                  -o-object-fit: contain;
+                  object-fit: contain;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+  
+                  img {
+                    width: 200px;
+                    height: 200px;
+                  }
+                }
+              }
+            }
+          }
+  
+          .product-detail {
+            background: #fdfdfd;
+            padding-top: 10px;
+  
+            .box-pro-detail {
+              z-index: 9;
+              width: 100%;
+              padding: 10px;
+  
+              h3 {
+                font-size: 14px;
+  
+                a {
+                  color: #2b89cd;
+                  line-height: 22px;
+                  display: block;
+                  height: 46px;
+                  overflow: hidden;
+                  text-decoration: none;
+                  outline: 0
+                }
+              }
+  
+              .pro-price {
+                font-size: 14px;
+                margin: 4px 0 0;
+                font-weight: 700;
+                color: #ec0b0b;
+              }
+  
+              .button-action {
+                margin: 10px 0 5px 0;
+                display: flex;
+  
+                button {
+                  background: rgba(255, 255, 255, 0.7);
+                  border: 1px solid #0076ce;
+                  border-radius: 3px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  font-size: 12px;
+                  width: 100%;
+                  padding: 8px 5px;
+                  outline: 0;
+                }
+  
+                .button-full {
+                  width: 100%;
+                }
+  
+                .button-buynow button {
+                  background: #0076ce;
+                  color: #fff;
+                  border: 1px solid #0076ce;
+                }
+  
+                .button-add {
+                  margin-left: 8px;
+                  width: 25%;
+  
+                  .add-to-cart i {
+                    color: #0076ce;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+  
+          }
+        }
+      }
+    }
+  }
+  #pagination {
+    border: 1px solid #f1f0f1;
+    border-top: 0;
+    margin-bottom: 30px;
+    background: #fff;
+  
+    .next, .page-node{
+      display: inline-block;
+      height: 30px;
+      text-align: center;
+      margin-left: 3px;
+      margin-right: 3px;
+      width: 30px;
+      line-height: 30px;
+      outline: 0;
+      border-radius: 3px;
+      color: #0076ce;
+      font-weight: 700;
+    }
+  
+    .current {
+      background: #00447c;
+      color: #fff;
+    }
+  }

@@ -1,0 +1,90 @@
+.demand{
+    .row{
+        .col-md-6{
+            position: relative;
+            img{
+                width: 340px;
+                height: 340px;
+            }
+            p{
+                font-size: 22px;
+                font-weight: 500;
+                position: absolute;
+                bottom: 0px;
+                background-color: #ffffffcc;
+                display: block;
+                width: 350px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-bottom: -2px;
+            } 
+        }
+    }
+}
+ 
+.tab-header{
+    .container{
+        .row{
+             
+            .header-left{
+                background-color: #2B89CD;
+                border: 1px #2B89CD solid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                margin-left: 10px;
+                h1{
+                    color: #ffff;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+            }
+            .header-right{
+                border: 1px #2B89CD solid;
+                background-color: #ffffffcc;
+                ul{
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    padding-top: 15px;
+                    li{
+                        list-style: none;
+                        margin-left: 30px;
+                        color: #2B89CD;
+                        font-size: 20px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Slider
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  
+  .carousel-indicators button.active {
+    background-color: #007bff;
+  }
+  
+  
+  .load-more-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+    .load-more-button button {
+    /* Optional: Additional styling */
+    }

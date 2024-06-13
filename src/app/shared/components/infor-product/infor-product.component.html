@@ -1,0 +1,43 @@
+<div class="inner-product">
+    <div class="container">
+        <!-- Swiper --> 
+        <div class="swiper mySwiper d-md-none">
+            <div class="swiper-wrapper" style="margin-bottom: 50px; margin-top: 30px;">
+                <div class="swiper-slide" *ngFor="let product of listProduct">
+                    <div class="product-card">
+                        <div class="card-img d-flex justify-content-center">
+                            <img [src]="getImageUrl(product.images[0])" alt="" class="img-fluid">
+                        </div>
+                        <h1 class="mt-4">{{product.name}}</h1>
+                        <p>{{product.price}}</p>
+                        <button class="btn btn-primary" (click)="addToCart(product.id)">Mua ngay</button>
+                        <span><img width="30px" src="https://logowik.com/content/uploads/images/shopping-cart5929.jpg" alt=""></span>
+                    </div>
+                </div>
+            </div> 
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!-- Non-swiper for larger screens -->
+        <div class="row d-flex flex-wrap d-none d-md-flex">
+            <div class="product-col col-lg-3 col-md-4 col-sm-6 col-12 p-2 mt-3" *ngFor="let product of listProduct
+            | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                <div class="product-card mt-4">
+                    <!-- Product card content -->
+                    <div class="card-img d-flex justify-content-center">
+                        <a [routerLink]="['/detail-product', product.id]">
+                            <img [src]="getImageUrl(product.images[0])" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <h1 class="mt-4">{{product.name}}</h1>
+                    <p>{{product.price}}</p>
+                    <button class="btn btn-primary" (click)="addToCart(product.id)">Mua ngay</button>
+                    <span><img src="https://logowik.com/content/uploads/images/shopping-cart5929.jpg" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<pagination-controls (pageChange)="p = $event" class="text-center mt-4" style="margin-top: 20px;"></pagination-controls>

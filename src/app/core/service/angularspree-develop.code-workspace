@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../angularspree-develop"
+		},
+		{
+			"path": "../../../../../FrontEnd"
+		},
+		{
+			"path": "../../../../../Front"
+		},
+		{
+			"path": "../../../../../web-laptop"
+		},
+		{
+			"path": "../../../../../BOOK-SHOP"
+		},
+		{
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Test-TT"
+	}
+}

@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="header ">
+      <h2 class="text-center">
+        <!--      {{ is_Edit ? 'Chỉnh sửa sản phẩm' : 'Tạo mới sản phẩm' }}-->
+        Tạo sản phẩm mới
+      </h2>
+  
+      <form  class="form row">
+  
+        <div class="form-group col-6" >
+          <label class="pt-2 form-label" >Tên người dùng: </label>
+          <input type="text" name="name" id="name" class="form-control" required>
+        </div>
+  
+        <div class="form-group col-6">
+          <label for="gender" class="form-label pt-2">Giới tính</label>
+          <select class="form-select" id="gender">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+            <option value="other">Khác</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-6">
+          <label for="validationCustomUsername" class="form-label pt-2">Email:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a Email.
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group col-6">
+          <label class="pt-2" for="date_of-birth">Ngày sinh: </label>
+          <input type="date" name="date_of-birth" id="date_of-birth" class="form-control" required>
+        </div>
+  
+        <div class="form-group col-6">
+          <label class="pt-2" for="password">Mật khẩu: </label>
+          <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+  
+        <div class="form-group col-6">
+          <label class="pt-2" for="address">Địa chỉ: </label>
+          <input type="text" name="address" id="address" class="form-control" required>
+        </div>
+  
+        <div class="form-group col-6">
+          <label class="pt-2" for="phone_number">Số điện thoại: </label>
+          <input type="tel" name="phone_number" id="phone_number" class="form-control" required>
+        </div>
+  
+        <div class="form-group col-6">
+          <label class="pt-2" for="nationality">Quốc tịch: </label>
+          <input type="text" name="nationality" id="nationality" class="form-control" required>
+        </div>
+  
+        <div class="form-group text-center my-4">
+          <button type="submit" class="btn btn-primary">Tạo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--<button routerLink="/items" type="button" class="btn btn-warning">-->
+  <!--  <i class="fa-solid fa-angles-left"></i>-->
+  <!--  Quay lại-->
+  <!--</button>-->

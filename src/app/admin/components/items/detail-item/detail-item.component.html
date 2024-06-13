@@ -1,0 +1,86 @@
+<div>
+    <h2>Tên sản phẩm</h2>
+    <div class="container-fluid text-bg-light p-4">
+      <h5 class="pb-4 border-bottom">Thông tin sản phẩm</h5>
+      <div class="row">
+        <div class="col-6 pt-4">
+          <div class="row my-2">
+            <div class="col-lg-5">Tên sản phẩm:</div>
+            <div class="col-lg-6"> {{ product.name }}</div>
+          </div>
+          <div class="row my-2">
+            <div class="col-lg-5">Giá:</div>
+            <div class="col-lg-6"> {{ product.price }}</div>
+          </div>
+          <div class="row my-2">
+            <div class="col-lg-5">Phân loại:</div>
+            <div class="col-lg-6"> {{ product.category.name }}</div>
+          </div>
+          <div class="row my-2">
+            <div class="col-lg-5">Thương hiệu:</div>
+            <div class="col-lg-6"> {{ product.brand }}</div>
+          </div>
+          <div class="row my-2">
+            <div class="col-lg-5">Ngày tạo:</div>
+            <div class="col-lg-6"> {{ product.created_at | date}}</div>
+          </div>
+  
+          <div class="row my-2">
+            <div class="col-lg-5">Ngày cập nhật cuối
+            </div>
+            <div class="col-lg-6"> : {{ product.updated_at | date}}
+            </div>
+          </div>
+  
+          <div class="row my-2">
+            <div class="col-lg-5">Size
+            </div>
+            <div class="col-lg-6"> : {{ product.size}}
+            </div>
+          </div>
+  
+          <div class="row my-2">
+            <div class="col-lg-5">Màu
+            </div>
+            <div class="col-lg-6"> : {{ product.color}}
+            </div>
+          </div>
+  
+          <div class="row my-2">
+            <div class="col-lg-5">Số lượng
+            </div>
+            <div class="col-lg-6"> : 30
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="col-6 pt-4">
+          <div class="col-lg-6">
+            <div class="image-list">
+              <img src="https://cdn.tgdd.vn/Files/2019/08/08/1185319/10_800x450.jpg" width="200px" alt="Product Image" />
+            </div>
+          </div>
+          <div class="description">
+            <h5 class="mt-2"> Mô tả</h5>
+            <div class="header">
+              <p class="my-2">Trước đây màu sắc Asagi đặc trưng Nhật Bản chỉ có trên Majestouch Minila-R, nay đã có mặt trên Majestouch 2SC!</p>
+            </div>
+            <div class="body">
+              <p class="my-2">- Thiết kế Tenkeyless và Fullsize tiêu chuẩn dành cho bạn cần bàn phím cơ gọn gàng hoặc đầy đủ phím số để xử lý số liệu.
+              </p>
+              <p class="my-2">- Kết nối cáp USB liền với độ trễ rất thấp giúp bạn chơi game hoặc gõ phím nhanh không độ trễ.</p>
+              <p class="my-2">- Chất liệu keycap PBT Doubleshot siêu bền với khả năng chống phai ký tự, nhìn rõ kể cả bàn phím dùng được 5 năm.</p>
+            </div>
+          </div>
+          <div class="designLocation">
+            <p>Designed in Japan</p>
+          </div>
+          <div class="guarantee mt-2 mb-2">
+            <p>Bảo hành: 60 năm đổi mới</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>

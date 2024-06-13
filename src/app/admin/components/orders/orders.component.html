@@ -1,0 +1,51 @@
+<table class="table caption-top">
+    <caption class="text-primary fs-3 text">
+      <h3 class="col-4">Danh sách đơn hàng</h3>
+      <div>
+        <form class=" col-4 form-inline" (submit)="onSearch()">
+          <div class="input-group">
+            <input class="form-control" type="search" [(ngModel)]="searchKeyword" name="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </caption>
+    <thead class="table-light"> 
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tên khách hàng</th>
+      <th scope="col">Tên nhân viên</th>
+      <th scope="col">Ngày tạo</th>
+      <th scope="col">Số lượng</th>
+      <th scope="col">Tổng tiền</th>
+      <th scope="col">Trạng thái</th>
+      <th scope="col">Xóa</th>
+    </tr>
+    </thead> 
+    <tbody>
+    <tr *ngFor="let item of orders | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+      <th scope="row">{{item.id}}</th>
+      <td><a class="nav-link" title="Ấn vào để xem chi tiết" routerLink="detail_oder/{{item.id}}">{{item.customer}}</a></td>
+      <td>{{item.employee}}</td>
+      <td>{{item.created_at | date}}</td>
+      <td>{{item.totalQuantity}}</td>
+      <td>{{item.total}}</td>
+      <td>
+        <select (change)="updateStatus(item.id, $event)">
+          <option [value]="1" [selected]="item.status === 'Pending'">Pending</option>
+          <option [value]="2" [selected]="item.status === 'Approved'">Approved</option>
+          <option [value]="0" [selected]="item.status === 'Not approved'">Not approved</option>
+        </select>        
+      </td>
+      <td>
+        <button type="button" class="btn">
+          <i class="fa-solid fa-trash text-danger" (click)="deleteOrder(item.id)"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>
